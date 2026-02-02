@@ -1,0 +1,20 @@
+
+<html>
+    <body>
+        <form action="/<%= pokemon.id %>/update" method="POST">
+            <label for="pokemon">POKEMON NAME:</label>
+            <input type="text" name="pokemon" id="pokemon" value=<%=pokemon.pokemon %>>
+            <label for="trainer">TRAINER:</label>
+            <input type="text" name="trainer" id="trainer" value=<%=pokemon.trainer %>>
+            <label for="type">TYPE:</label>
+            <SELECT name="type" id="type" value=<%=pokemon.type %>>
+                <option value="fire">FIRE</option>
+                <option value="water">WATER</option>
+                <option value="grass">GRASS</option>
+                <option value="rock">ROCK</option>
+                <option value="electric">ELECTRIC</option>
+            </SELECT>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </body>
+</html>

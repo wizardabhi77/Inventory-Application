@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <ul>
+        <% pokemon.map((poke) => { %>
+            <h1><%= poke.pokemon %></h1>
+            <h2>TRAINER: <%= poke.trainer %></h2>
+            <h2>TYPE : <%= poke.type %></h2>
+            <a href="/<%= poke.id %>/update">UPDATE</a>
+            <br>
+        <% }) %>
+        </ul>
+    </body>
+</html>

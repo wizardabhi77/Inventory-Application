@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <form action="/type" method="POST">
+            <label for="type">SELECT POKEMON TYPE:</label>
+            <select name="type" id="type">
+                <option value="water">WATER</option>
+                <option value="electric">ELECTRIC</option>
+                <option value="rock">ROCK</option>
+                <option value="fire">FIRE</option>
+            </select>
+            <button type="submit">SUBMIT</button>
+        </form>
+        <a href="/new">ADD POKEMON</a>
+        <ul>
+        <% pokemon.map((poke) => { %>
+            <h1><%= poke.pokemon %></h1>
+            <h2>TRAINER: <%= poke.trainer %></h2>
+            <h2>TYPE : <%= poke.type %></h2>
+            <a href="/<%= poke.id %>/update">UPDATE</a>
+            <br>
+        <% }) %>
+        </ul>
+    </body>
+</html>

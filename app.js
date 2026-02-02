@@ -7,7 +7,7 @@ const pokemonRouter = require("./routes/pokemonRouter");
 
 app.set("view engine","ejs");
 app.set("views", path.join(__dirname, "views"));
-app.set(Express.urlencoded({extended: true}));
+app.use(Express.urlencoded({extended: true}));
 
 app.use("/", pokemonRouter);
 
