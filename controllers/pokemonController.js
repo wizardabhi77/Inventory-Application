@@ -46,11 +46,18 @@ async function getUpdate(req,res) {
    
 }
 
+async function getDelete(req,res) {
+    const id = req.params.id;
+    const pokemon = await db.deletePokemonById(id);
+    res.redirect("/");
+}
+
 module.exports = {
     getPokemon,
     pokemonByTypePost,
     getCreate,
     postCreate,
     getUpdate,
-    postUpdate
+    postUpdate,
+    getDelete
 }

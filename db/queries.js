@@ -25,11 +25,17 @@ async function getPokemonById(id){
     const { rows } = await pool.query("select * from pokemon where id = $1",[id]);
     return rows[0];
 }
+
+async function deletePokemonById(id){
+    await pool.query("delete from pokemon where id = $1",[id]);
+}
+
 module.exports = {
     getAllPokemon,
     getPokemonByType,
     createPokemon,
     getPokemonById,
-    updatePokemon
+    updatePokemon,
+    deletePokemonById
 } 
 
